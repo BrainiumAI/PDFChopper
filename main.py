@@ -1,6 +1,18 @@
 import argparse
 
 
+def get_directory():
+    """
+    temporary(?) hack to get system agnostic path for the pdf file
+    """
+    directory = input("Enter the full file directory path for the pdf file: ")
+    return str(directory)
+
+
+selected_directory = get_directory()
+print("Selected directory: ", selected_directory)
+
+
 def main():
     """
     pdf_chopper - Split PDF Files
@@ -19,16 +31,16 @@ def main():
     parser = argparse.ArgumentParser(description='PDF Chopper')
     
     # Add arguments for user choice
-    parser.add_argument('--split-by', choices=['size', 'page'], default='size', help='Specify whether to split by size or page numbers')
-    
-    # Add other arguments for desired options
+    parser.add_argument(
+        '--split-by', choices=['size', 'pages'],
+        default='size', help='Specify whether to split by "size" or "pages"')
     
     # Parse the command-line arguments
     args = parser.parse_args()
     
     if args.split_by == 'size':
         # Split PDF files based on size
-        desired_size_mb = float(input('Enter the desired size in MB: '))
+        desired_size_mb = float(input('Enter the desired size (in MB) for each chopped PDF:'))
         # Call the function to split by size
         
     elif args.split_by == 'page':
