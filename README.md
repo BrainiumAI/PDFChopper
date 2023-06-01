@@ -1,19 +1,32 @@
-# PDFChopper
+# pdf_chopper
 Splits PDF files into multiple, smaller PDF files
 
-# PDF Splitter
+pdf_chopper is a Python tool that allows you to split PDF files based on their size or by pagecount. It provides a convenient way to break down large PDF files into smaller ones, making them more manageable for storage or sharing.
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-PDF Splitter is a Python tool that allows you to split PDF files based on their size. It provides a convenient way to break down large PDF files into smaller ones, making them more manageable for storage or sharing.
+## Usage
+
+To split a PDF file, use the following command:
+
+```shell
+python pdf_chopper.py --file path/to/input.pdf --size <desired_size_mb>
+```
+
+Replace `path/to/input.pdf` with the path to your input PDF file, and `<desired_size_mb>` with the desired size of each split PDF in megabytes.
+
+Additional options:
+- `--output-dir`: Specify the output directory for the split PDF files. (default: `./output`)
+- `--prefix`: Specify a prefix for the output file names. (default: `split_`)
 
 ## Features
 
-- Split PDF files based on desired file size
-- Maintain original file formatting and content in the split PDFs
-- Command-line interface for easy usage
-- Customizable output directory and file naming options
-
+- Split PDF files based on desired file size []
+- Split PDF files based on desired page count length []
+- Maintain original file formatting and content in the split PDFs []
+- Command-line interface for easy usage []
+- PDFSticher to undo a 
+- Customizable output directory and file naming options []
+- 
 ## Installation
 
 1. Clone the repository:
@@ -31,19 +44,6 @@ PDF Splitter is a Python tool that allows you to split PDF files based on their 
    pip install -r requirements.txt
    ```
 
-## Usage
-
-To split a PDF file, use the following command:
-
-```shell
-python pdf_splitter.py --file path/to/input.pdf --size <desired_size_mb>
-```
-
-Replace `path/to/input.pdf` with the path to your input PDF file, and `<desired_size_mb>` with the desired size of each split PDF in megabytes.
-
-Additional options:
-- `--output-dir`: Specify the output directory for the split PDF files. (default: `./output`)
-- `--prefix`: Specify a prefix for the output file names. (default: `split_`)
 
 ## License
 
@@ -55,7 +55,7 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## Acknowledgements
 
-This project was inspired by the need to efficiently manage and share large PDF files. Special thanks to the contributors who have helped make this project better.
+This project was inspired by the need to efficiently manage and share large PDF files. Specifically to overcome the Kindle file size limit! 
 
 ## Contact
 
